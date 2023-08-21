@@ -436,6 +436,100 @@ void game(){
 
 
         }
+
+         ///for player 2;
+        if(f2==0){
+
+            outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
+            dicerolling();
+            sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
+            outtextxy(220,18,arr);
+        }
+
+        if(rn==6&&f2==0){
+
+            setfillstyle(SOLID_FILL,YELLOW);
+            circle(377,83,6); ///p2 start point
+            floodfill(377,83,15);
+            f2=1;
+
+        }
+        if(f2==1)
+        {
+            outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
+            dicerolling();
+            sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
+            outtextxy(220,18,arr);
+            if(cntt2==0){
+            
+                outtextxy(377-6,83-8,"  ");
+                cntt2=1;
+
+            }
+
+            if(rn==6){
+            
+                outtextxy(pla2x[cnt2-1]-6,pla2y[cnt2-1]-8,"  ");
+
+                player2();
+                if(fg2==1)
+                    break;
+                if((currentPos2x == currentPos1x) && (currentPos2y == currentPos1y))
+                {
+                    f1=0;
+                    cntt1=0;
+                    cnt1=0;
+                    setfillstyle(SOLID_FILL,GREEN);
+                    circle(96,217,6); ///p1 stop point
+                    floodfill(96,217,15);
+                }
+
+                outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
+                dicerolling();
+                sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
+                outtextxy(220,18,arr);
+
+            }
+            if(rn==6){
+            
+                outtextxy(pla2x[cnt2-1]-6,pla2y[cnt2-1]-8,"  ");
+                player2();
+                if(fg2==1)
+                    break;
+                if((currentPos2x == currentPos1x) && (currentPos2y == currentPos1y)){
+                
+                    f1=0;
+                    cntt1=0;
+                    cnt1=0;
+                    setfillstyle(SOLID_FILL,GREEN);
+                    circle(96,217,6); ///p1 stop point
+                    floodfill(96,217,15);
+
+                }
+
+                outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
+                dicerolling();
+                sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
+                outtextxy(220,18,arr);
+
+            }
+
+            outtextxy(pla2x[cnt2-1]-6,pla2y[cnt2-1]-8,"  ");
+            player2();
+            if(fg2==1)
+                break;
+            if((currentPos2x == currentPos1x) && (currentPos2y == currentPos1y)){
+            
+                f1=0;
+                cntt1=0;
+                cnt1=0;
+                setfillstyle(SOLID_FILL,GREEN);
+                circle(96,217,6); ///p1 stop point
+                floodfill(96,217,15);
+
+            }
+
+        }
     }
 }
 
@@ -498,6 +592,66 @@ void player1(){
     }
 
 }
+
+
+void player2(){
+    int i;
+    if((currentPos2x == 326) && (currentPos2y >= 57) && (currentPos2y<235)){
+
+        cntg2=cnt2;
+
+        for(i=0; i<rn; i++){
+        
+            cntg2++;
+        }
+
+        if((pla2x[cntg2-1] == 326) && (pla2y[cntg2-1] == 215)){
+
+            setfillstyle(SOLID_FILL,YELLOW);
+            circle(pla2x[cntg2-1],pla2y[cntg2-1],6);
+            floodfill(pla2x[cntg2-1],pla2y[cntg2-1],15);
+
+            outtextxy(60,15,"PLAYER 2 IS THE WINNER");
+            getch();
+            fg2=1;
+
+        }
+        else if((pla2x[cntg2-1] == 326) && (pla2y[cntg2-1]<=187 )){
+        
+            setfillstyle(SOLID_FILL,YELLOW);
+            circle(pla2x[cntg2-1],pla2y[cntg2-1],6);
+            floodfill(pla2x[cntg2-1],pla2y[cntg2-1],15);
+
+            cnt2=cntg2;
+        }
+        else if((pla2x[cntg2-1]==326)&&(pla2y[cntg2-1]>215)){
+        
+            setfillstyle(SOLID_FILL,YELLOW);
+            circle(pla2x[cnt2-1],pla2y[cnt2-1],6);
+            floodfill(pla2x[cnt2-1],pla2y[cnt2-1],15);
+
+        }
+
+    }
+
+    else{
+    
+        for(i=0; i<rn; i++){
+        
+
+            cnt2++;
+            currentPos2x = pla2x[cnt2-1];
+            currentPos2y = pla2y[cnt2-1];
+
+        }
+        setfillstyle(SOLID_FILL,YELLOW);
+        circle(pla2x[cnt2-1],pla2y[cnt2-1],6);
+        floodfill(pla2x[cnt2-1],pla2y[cnt2-1],15);
+
+    }
+
+}
+
 
 void dicerolling(){
 
