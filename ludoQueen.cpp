@@ -19,10 +19,11 @@ void game();
 void dicerolling();
 void player1();
 void player2();
+void player3();
 
-int rn,cnt1=0,cnt2=0,cntt1=0,cntt2=0,cntg1=0,cntg2=0;
-int f1=0,f2=0,fg1=0,fg2=0;
-int currentPos1x,currentPos1y,currentPos2x,currentPos2y;
+int rn,cnt1=0,cnt2=0,cntt1=0,cntt2=0,cntg1=0,cntg2=0,cnt3=0,cntt3=0,cntg3=0;
+int f1=0,f2=0,f3=0,fg1=0,fg2=0,fg3=0;
+int currentPos1x,currentPos1y,currentPos2x,currentPos2y,currentPos3x,currentPos3y;
 
 int pla1x[] ={130,164,198,232,275,275,275,275,275,275,326,377,377,377,377,377,377,
               420,454,488,522,556,590,590,590,556,522,488,454,420,377,377,377,377,
@@ -45,6 +46,18 @@ int pla2y[] = {109,135,161,187,217,217,217,217,217,217,252,287,287,287,287,287,
                287,317,343,369,395,421,447,447,447,421,395,369,343,317,287,287,
                287,287,287,287,252,217,217,217,217,217,217,187,161,135,109,83,
                57,57,83,109,135,161,187,215,225,225};
+
+
+int pla3x[] = {522,488,454,420,377,377,377,377,377,377,326,275,275,275,275,275,
+               275,232,198,164,130,96,62,62,62,96,130,164,198,232,275,275,275,
+               275,275,275,326,377,377,377,377,377,377,420,454,488,522,556,590,
+               590,556,522,488,454,420,386,378,378};
+
+
+int pla3y[] = {287,287,287,287,317,343,369,395,421,447,447,447,421,395,369,343,
+               317,287,287,287,287,287,287,252,217,217,217,217,217,217,187,161,
+               135,109,83,57,57,57,83,109,135,161,187,217,217,217,217,217,217,
+               252,252,252,252,252,252,252,252,252};
 
 
 int main()
@@ -530,6 +543,136 @@ void game(){
             }
 
         }
+
+         ///for player 3;
+        if(f3==0){
+
+            outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
+            dicerolling();
+            sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
+            outtextxy(220,18,arr);
+
+        }
+
+        if(rn==6 && f3==0){
+
+            setfillstyle(SOLID_FILL,BLUE);
+            circle(556,287,6);  ///p3 start point
+            floodfill(556,287,15);
+            f3=1;
+        }
+        if(f3==1){
+
+            outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
+            dicerolling();
+            sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
+            outtextxy(220,18,arr);
+            if(cntt3==0){
+
+                outtextxy(556-6,287-8,"  ");
+                cntt3=1;
+            }
+
+            if(rn==6){
+
+                outtextxy(pla3x[cnt3-1]-6,pla3y[cnt3-1]-8,"  ");
+
+                player3();
+
+                if(fg3==1)
+                    break;
+
+                if((currentPos3x == currentPos1x) && (currentPos3y == currentPos1y)){
+
+                    f1=0;
+                    cntt1=0;
+                    cnt1=0;
+                    setfillstyle(SOLID_FILL,GREEN);
+                    circle(96,217,6); ///p1 stop point
+                    floodfill(96,217,15);
+
+                }
+
+                if((currentPos3x == currentPos2x) && (currentPos3y == currentPos2y)){
+
+                    f2=0;
+                    cntt2=0;
+                    cnt2=0;
+                    setfillstyle(SOLID_FILL,YELLOW);
+                    circle(377,83,6); ///p2 stop point
+                    floodfill(377,83,15);
+
+                }
+
+
+                outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
+                dicerolling();
+
+                sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
+                outtextxy(220,18,arr);
+
+            }
+            if(rn==6){
+
+                outtextxy(pla3x[cnt3-1]-6,pla3y[cnt3-1]-8,"  ");
+                player3();
+
+                if(fg3==1)
+                    break;
+
+                if((currentPos3x == currentPos1x) && (currentPos3y == currentPos1y)){
+
+                    f1=0;
+                    cntt1=0;
+                    cnt1=0;
+                    setfillstyle(SOLID_FILL,GREEN);
+                    circle(96,217,6); ///p1 stop point
+                    floodfill(96,217,15);
+                }
+                if((currentPos3x == currentPos2x) && (currentPos3y == currentPos2y)){
+
+                    f2=0;
+                    cntt2=0;
+                    cnt2=0;
+                    setfillstyle(SOLID_FILL,YELLOW);
+                    circle(377,83,6); ///p2 stop point
+                    floodfill(377,83,15);
+
+                }
+
+                outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
+                dicerolling();
+                sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
+                outtextxy(220,18,arr);
+
+            }
+
+            outtextxy(pla3x[cnt3-1]-6,pla3y[cnt3-1]-8,"  ");
+            player3();
+
+            if(fg3==1)
+                break;
+
+            if((currentPos3x == currentPos1x) && (currentPos3y == currentPos1y)){
+
+                    f1=0;
+                    cntt1=0;
+                    cnt1=0;
+                    setfillstyle(SOLID_FILL,GREEN);
+                    circle(96,217,6); ///p1 stop point
+                    floodfill(96,217,15);
+
+            }
+            if((currentPos3x == currentPos2x) && (currentPos3y == currentPos2y)){
+
+                    f2=0;
+                    cntt2=0;
+                    cnt2=0;
+                    setfillstyle(SOLID_FILL,YELLOW);
+                    circle(377,83,6); ///p2 stop point
+                    floodfill(377,83,15);
+            }
+        }
     }
 }
 
@@ -648,6 +791,65 @@ void player2(){
         circle(pla2x[cnt2-1],pla2y[cnt2-1],6);
         floodfill(pla2x[cnt2-1],pla2y[cnt2-1],15);
 
+    }
+
+}
+
+void player3(){
+
+    int i;
+    if((currentPos3x<=590) && (currentPos3y==252) && (currentPos3x>360)){
+
+        cntg3=cnt3;
+
+        for(i=0; i<rn; i++){
+
+            cntg3++;
+        }
+
+        if((pla3x[cntg3-1] == 386) && (pla3y[cntg3-1] == 252)){
+
+
+            setfillstyle(SOLID_FILL,BLUE);
+            circle(pla3x[cntg3-1],pla3y[cntg3-1],6);
+            floodfill(pla3x[cntg3-1],pla3y[cntg3-1],15);
+
+            outtextxy(60,15,"PLAYER 3 IS THE WINNER");
+            getch();
+            fg3=1;
+        }
+        else if((pla3x[cntg3-1]>=432) && (pla3y[cntg3-1] == 252)){
+
+            setfillstyle(SOLID_FILL,BLUE);
+            circle(pla3x[cntg3-1],pla3y[cntg3-1],6);
+            floodfill(pla3x[cntg3-1],pla3y[cntg3-1],15);
+            cnt3=cntg3;
+
+        }
+        else if((pla3x[cntg3-1]<386) && (pla3y[cntg3-1] == 252)){
+
+            setfillstyle(SOLID_FILL,BLUE);
+            circle(pla3x[cnt3-1],pla3y[cnt3-1],6);
+            floodfill(pla3x[cnt3-1],pla3y[cnt3-1],15);
+
+        }
+
+    }
+    else{
+
+        for(i=0; i<rn; i++){
+
+
+            cnt3++;
+            currentPos3x = pla3x[cnt3-1];
+            currentPos3y = pla3y[cnt3-1];
+
+
+        }
+
+        setfillstyle(SOLID_FILL,BLUE);
+        circle(pla3x[cnt3-1],pla3y[cnt3-1],6);
+        floodfill(pla3x[cnt3-1],pla3y[cnt3-1],15);
     }
 
 }
