@@ -499,8 +499,9 @@ void game(){
             f2=1;
 
         }
-        if(f2==1)
-        {
+
+        if(f2==1){
+        
             outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
             dicerolling();
             sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
@@ -519,8 +520,8 @@ void game(){
                 player2();
                 if(fg2==1)
                     break;
-                if((currentPos2x == currentPos1x) && (currentPos2y == currentPos1y))
-                {
+                if((currentPos2x == currentPos1x) && (currentPos2y == currentPos1y)){
+                
                     f1=0;
                     cntt1=0;
                     cnt1=0;
@@ -626,6 +627,7 @@ void game(){
             floodfill(556,287,15);
             f3=1;
         }
+
         if(f3==1){
 
             outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
@@ -786,8 +788,7 @@ void player1(){
     }
     else{
 
-        for(i=0; i<rn; i++)
-        {
+        for(i=0; i<rn; i++){
 
             cnt1++;
             currentPos1x = pla1x[cnt1-1];
