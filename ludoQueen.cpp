@@ -397,6 +397,17 @@ void game(){
 
                 }
 
+                if((currentPos1x == currentPos3x) && (currentPos1y == currentPos3y)){
+
+                    f3 = 0;
+                    cntt3 = 0;
+                    cnt3 = 0;
+                    setfillstyle(SOLID_FILL,BLUE);
+                    circle(556,287,6);  ///p3 stop point
+                    floodfill(556,287,15);
+
+                }
+
                 dicerolling();
                 sprintf(arr,"PLAYER 1 DICE ROLL IS %d",rn);
                 outtextxy(220,18,arr);
@@ -418,8 +429,19 @@ void game(){
                     cntt2=0;
                     cnt2=0;
                     setfillstyle(SOLID_FILL,YELLOW);
-                    circle(377,83,6); ///p2 stop point
+                    circle(377,83,6); //p2 stop point
                     floodfill(377,83,15);
+
+                }
+
+                if((currentPos1x == currentPos3x) && (currentPos1y == currentPos3y)){
+
+                    f3 = 0;
+                    cntt3 = 0;
+                    cnt3 = 0;
+                    setfillstyle(SOLID_FILL,BLUE);
+                    circle(556,287,6);  //p3 stop point
+                    floodfill(556,287,15);
 
                 }
 
@@ -442,11 +464,21 @@ void game(){
                 cntt2=0;
                 cnt2=0;
                 setfillstyle(SOLID_FILL,YELLOW);
-                circle(377,83,6); ///p2 stop point
+                circle(377,83,6); //p2 stop point
                 floodfill(377,83,15);
 
             }
 
+            if((currentPos1x == currentPos3x) && (currentPos1y == currentPos3y)){
+
+                    f3 = 0;
+                    cntt3 = 0;
+                    cnt3 = 0;
+                    setfillstyle(SOLID_FILL,BLUE);
+                    circle(556,287,6);  //p3 stop point
+                    floodfill(556,287,15);
+
+            }
 
         }
 
@@ -493,8 +525,19 @@ void game(){
                     cntt1=0;
                     cnt1=0;
                     setfillstyle(SOLID_FILL,GREEN);
-                    circle(96,217,6); ///p1 stop point
+                    circle(96,217,6); //p1 stop point
                     floodfill(96,217,15);
+                }
+
+                if((currentPos2x == currentPos3x) && (currentPos2y == currentPos3y)){
+
+                    f3 = 0;
+                    cntt3 = 0;
+                    cnt3 = 0;
+                    setfillstyle(SOLID_FILL,BLUE);
+                    circle(556,287,6);  //p3 stop point
+                    floodfill(556,287,15);
+
                 }
 
                 outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
@@ -520,6 +563,17 @@ void game(){
 
                 }
 
+                if((currentPos2x == currentPos3x) && (currentPos2y == currentPos3y)){
+
+                    f3 = 0;
+                    cntt3 = 0;
+                    cnt3 = 0;
+                    setfillstyle(SOLID_FILL,BLUE);
+                    circle(556,287,6);  ///p3 stop point
+                    floodfill(556,287,15);
+
+                }
+
                 outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
                 dicerolling();
                 sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
@@ -537,14 +591,25 @@ void game(){
                 cntt1=0;
                 cnt1=0;
                 setfillstyle(SOLID_FILL,GREEN);
-                circle(96,217,6); ///p1 stop point
+                circle(96,217,6); //p1 stop point
                 floodfill(96,217,15);
+
+            }
+
+            if((currentPos2x == currentPos3x) && (currentPos2y == currentPos3y)){
+
+                f3 = 0;
+                cntt3 = 0;
+                cnt3 = 0;
+                setfillstyle(SOLID_FILL,BLUE);
+                circle(556,287,6);  //p3 stop point
+                floodfill(556,287,15);
 
             }
 
         }
 
-         ///for player 3;
+        ///for player 3;
         if(f3==0){
 
             outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
@@ -557,7 +622,7 @@ void game(){
         if(rn==6 && f3==0){
 
             setfillstyle(SOLID_FILL,BLUE);
-            circle(556,287,6);  ///p3 start point
+            circle(556,287,6);  //p3 start point
             floodfill(556,287,15);
             f3=1;
         }
@@ -588,7 +653,7 @@ void game(){
                     cntt1=0;
                     cnt1=0;
                     setfillstyle(SOLID_FILL,GREEN);
-                    circle(96,217,6); ///p1 stop point
+                    circle(96,217,6); //p1 stop point
                     floodfill(96,217,15);
 
                 }
@@ -599,7 +664,7 @@ void game(){
                     cntt2=0;
                     cnt2=0;
                     setfillstyle(SOLID_FILL,YELLOW);
-                    circle(377,83,6); ///p2 stop point
+                    circle(377,83,6); //p2 stop point
                     floodfill(377,83,15);
 
                 }
@@ -626,7 +691,7 @@ void game(){
                     cntt1=0;
                     cnt1=0;
                     setfillstyle(SOLID_FILL,GREEN);
-                    circle(96,217,6); ///p1 stop point
+                    circle(96,217,6); //p1 stop point
                     floodfill(96,217,15);
                 }
                 if((currentPos3x == currentPos2x) && (currentPos3y == currentPos2y)){
@@ -635,7 +700,7 @@ void game(){
                     cntt2=0;
                     cnt2=0;
                     setfillstyle(SOLID_FILL,YELLOW);
-                    circle(377,83,6); ///p2 stop point
+                    circle(377,83,6); //p2 stop point
                     floodfill(377,83,15);
 
                 }
@@ -669,7 +734,7 @@ void game(){
                     cntt2=0;
                     cnt2=0;
                     setfillstyle(SOLID_FILL,YELLOW);
-                    circle(377,83,6); ///p2 stop point
+                    circle(377,83,6); //p2 stop point
                     floodfill(377,83,15);
             }
         }
