@@ -1,7 +1,8 @@
 #include <graphics.h>
-#include<conio.h>
-#include<stdio.h>
-#include<time.h>
+#include <conio.h>
+#include <stdio.h>
+#include <time.h>
+
 
 void greenCorner();
 void yellowCorner();
@@ -21,12 +22,13 @@ void player1(int n);
 void player2(int n);
 //void player3();
 //void player4();
+void winner(int num);
 
 
 int rn,cnt1[2]={0},cnt2[2]={0},cntt1[2]={0},status1[2]={0},cntt2[2]={0},cntg1[2] ={0},cntg2[2]={0},status2[2]={0};
-int cnt3=0,cntt3=0,cntg3=0,cnt4=0,cntt4=0,cntg4,n;
+int cnt3=0,cntt3=0,cntg3=0,cnt4=0,cntt4=0,cntg4,n, win =0;
 int f1=0,f2=0,f3=0,fg1[2]={0},fg2[2]={0},fg3=0,f4=0,fg4=0;
-char pp,choice;
+char pp,choice, winnerp[4];
 int player1x[2][58]={0}, player1y[2][58]={0}, player2x[2][58]={0}, player2y[2][58]={0};
 
 int pla1x[58] ={130,164,198,232,275,275,275,275,275,275,326,377,377,377,377,377,377,
@@ -89,6 +91,7 @@ int main(){
 
 
     game();
+
 
 
 	getch();
@@ -359,6 +362,8 @@ void game(){
     while(1){
 
         //for player 1;
+     if(fg1[0]==0 || fg1[1]==0){
+
        if(f1==0){
 
             outtextxy(180,2,"NOW, YOUR TURN! DICE ROLL");
@@ -533,8 +538,10 @@ void game(){
                     player1(n);
 
                     if(fg1[0]==1 && fg1[1] == 1){
-                        outtextxy(60,15,"PLAYER 1 IS THE WINNER");
-                        return;
+                        //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
+                        //return;
+                        winner(1);
+                        //return;
 
                     }
                     if((currentPos1x[n] == currentPos2x[0])  && (currentPos1y[n] == currentPos2y[0])){
@@ -573,8 +580,10 @@ void game(){
                             outtextxy(player1x[0][cnt1[0]-1]-6,player1y[0][cnt1[0]-1]-8,"  ");
                             player1(0);
                             if(fg1[0]==1 && fg1[1] == 1){
-                                outtextxy(60,15,"PLAYER 1 IS THE WINNER");
-                                return;
+                                //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
+                                //return;
+                                winner(1);
+                                //return;
 
                             }
 
@@ -613,8 +622,10 @@ void game(){
                                 outtextxy(player1x[1][cnt1[1]-1]-6,player1y[1][cnt1[1]-1]-8,"  ");
                                 player1(1);
                                 if(fg1[0]==1 && fg1[1] == 1){
-                                    outtextxy(60,15,"PLAYER 1 IS THE WINNER");
-                                    return;
+                                    //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
+                                    //return;
+                                    winner(1);
+                                    //return;
 
                                 }
 
@@ -681,10 +692,11 @@ void game(){
                 player1(n);
 
                 if(fg1[0] == 1 && fg1[1] == 1){
-                    outtextxy(60,15,"PLAYER 1 IS THE WINNER");
+                    //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
                     //getch();
-                    //break;
-                    return;
+                    //return;
+                    winner(1);
+                    //return;
                 }
 
                 if((currentPos1x[n] == currentPos2x[0])  && (currentPos1y[n] == currentPos2y[0])){
@@ -721,8 +733,10 @@ void game(){
                             outtextxy(player1x[0][cnt1[0]-1]-6,player1y[0][cnt1[0]-1]-8,"  ");
                             player1(0);
                             if(fg1[0]==1 && fg1[1] == 1){
-                                outtextxy(60,15,"PLAYER 1 IS THE WINNER");
-                                return;
+                                //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
+                                //return;
+                                winner(1);
+                                //return;
 
                             }
 
@@ -758,8 +772,9 @@ void game(){
                                 outtextxy(player1x[1][cnt1[1]-1]-6,player1y[1][cnt1[1]-1]-8,"  ");
                                 player1(1);
                                 if(fg1[0]==1 && fg1[1] == 1){
-                                    outtextxy(60,15,"PLAYER 1 IS THE WINNER");
-                                    return;
+                                    //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
+                                    winner(1);
+                                    //return;
 
                                 }
 
@@ -797,9 +812,11 @@ void game(){
 
 
         }
+     }
 
 
         //player 2
+     if(fg2[0] == 0 || fg2[1] == 0){
 
         if(f2==0){
 
@@ -975,9 +992,9 @@ void game(){
                     player2(n);
 
                     if(fg2[0]==1 && fg2[1] == 1){
-                        outtextxy(60,15,"PLAYER 2 IS THE WINNER");
-                        return;
-
+                        //outtextxy(60,15,"PLAYER 2 IS THE WINNER");
+                        //return;
+                        winner(2);
                     }
 
                     if((currentPos2x[n] == currentPos1x[0]) && (currentPos2y[n] == currentPos1y[0])){
@@ -1016,8 +1033,9 @@ void game(){
                             outtextxy(player2x[0][cnt2[0]-1]-6,player2y[0][cnt2[0]-1]-8,"  ");
                             player2(0);
                             if(fg2[0]==1 && fg2[1] == 1){
-                                outtextxy(60,15,"PLAYER 2 IS THE WINNER");
-                                return;
+                                //outtextxy(60,15,"PLAYER 2 IS THE WINNER");
+                                //return;
+                                winner(2);
 
                             }
                             if((currentPos2x[0] == currentPos1x[0]) && (currentPos2y[0] == currentPos1y[0])){
@@ -1053,8 +1071,9 @@ void game(){
                                 outtextxy(player2x[1][cnt2[1]-1]-6,player2y[1][cnt2[1]-1]-8,"  ");
                                 player2(1);
                                 if(fg2[0]==1 && fg2[1] == 1){
-                                    outtextxy(60,15,"PLAYER 2 IS THE WINNER");
-                                    return;
+                                    //outtextxy(60,15,"PLAYER 2 IS THE WINNER");
+                                    //return;
+                                    winner(2);
 
                                 }
                                 if((currentPos2x[1] == currentPos1x[0]) && (currentPos2y[1] == currentPos1y[0])){
@@ -1120,10 +1139,11 @@ void game(){
                 player2(n);
 
                 if(fg2[0] == 1 && fg2[1] == 1){
-                    outtextxy(60,15,"PLAYER 2 IS THE WINNER");
+                    //outtextxy(60,15,"PLAYER 2 IS THE WINNER");
                     //getch();
                     //break;
-                    return;
+                    //return;
+                    winner(2);
                 }
 
                 if((currentPos2x[n] == currentPos1x[0]) && (currentPos2y[n] == currentPos1y[0])){
@@ -1160,8 +1180,9 @@ void game(){
                             outtextxy(player2x[0][cnt2[0]-1]-6,player2y[0][cnt2[0]-1]-8,"  ");
                             player2(0);
                             if(fg2[0]==1 && fg2[1] == 1){
-                                outtextxy(60,15,"PLAYER 2 IS THE WINNER");
-                                return;
+                                //outtextxy(60,15,"PLAYER 2 IS THE WINNER");
+                                //return;
+                                winner(2);
 
                             }
                             if((currentPos2x[0] == currentPos1x[0]) && (currentPos2y[0] == currentPos1y[0])){
@@ -1195,8 +1216,9 @@ void game(){
                                 outtextxy(player2x[1][cnt2[1]-1]-6,player2y[1][cnt2[1]-1]-8,"  ");
                                 player2(1);
                                 if(fg2[0]==1 && fg2[1] == 1){
-                                    outtextxy(60,15,"PLAYER 2 IS THE WINNER");
-                                    return;
+                                    //outtextxy(60,15,"PLAYER 2 IS THE WINNER");
+                                    //return;
+                                    winner(2);
 
                                 }
 
@@ -1234,7 +1256,23 @@ void game(){
 
         }
 
+     }
+
+     if(fg1[0]==1 && fg2[0]==1 && fg1[1]==1 && fg2[1] == 1){
+        cleardevice();
+        break;
+     }
+
+
     }
+
+    for(i=0; i<4; i++){
+        printf("%d\n",winnerp[i]);
+    }
+    sprintf(arr,"PLAYER%d => WINNER",winnerp[0]);
+    outtextxy(70,70,arr);
+    sprintf(arr,"PLAYER%d => FIRST RUNNER UP",winnerp[1]);
+    outtextxy(70,90,arr);
 
 }
 
@@ -1376,7 +1414,41 @@ void player2(int n){
 
 }
 
+void winner(int  num){
 
+  if(win==0){
+
+      outtextxy(50,50,"WINNER");
+      winnerp[win] = num;
+      getch();
+      delay(500);
+      win+=1;
+  }
+  else{
+    if(win==1){
+
+	     //outtextxy(120,245,"FIRST RUNNER UP");
+	     outtextxy(50,50,"FIRST RUNNER UP");
+	     winnerp[win] = num;
+	     getch();
+	     delay(500);
+	     win+=1;
+	 }
+	 else{
+
+	       winnerp[win] = num;
+	       //delay(500);
+	       //setfillstyle(0,BLACK);
+	       //bar(0,0,636,476);
+	       //settextstyle(5,HORIZ_DIR,9);
+	       //outtextxy(50,100,"THANK YOU");
+	       getch();
+	       delay(500);
+	       //exit(0);
+	     }
+      }
+
+}
 
 void dicerolling(){
 
@@ -1385,3 +1457,4 @@ void dicerolling(){
     getch();
 
 }
+
