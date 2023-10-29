@@ -31,8 +31,8 @@ void cutting4(int n);
 
 int rn,cnt1[2]={0},cnt2[2]={0},cntt1[2]={0},status1[2]={0},cntt2[2]={0},cntg1[2] ={0},cntg2[2]={0},status2[2]={0}, status3[2]={0};
 int cnt3[2]={0},cntt3[2]={0},cntg3[2]={0},cnt4[2]={0},cntt4[2]={0},cntg4[2]={0},status4[2]={0},n, win =0;
-int f1=0,f2=0,f3=0,f4=0,fg1[2]={0},fg2[2]={0},fg3[2]={0},fg4[2]={0},endl1[2]={0},endl2[2]={0},endl3[2]={0},endl4[2]={0};
-char pp,choice, winnerp[4];
+int f1=0,f2=0,f3=0,f4=0,fg1[2]={0},fg2[2]={0},fg3[2]={0},fg4[2]={0},endl1[2],endl2[2],endl3[2],endl4[2];
+char pp,choice, winnerp[4]={0};
 int player1x[2][58]={0}, player1y[2][58]={0}, player2x[2][58]={0}, player2y[2][58]={0}, player3x[2][58]={0}, player3y[2][58]={0};
 int player4x[2][58]={0}, player4y[2][58]={0};
 
@@ -369,7 +369,7 @@ void home(){
 
     // Printing The Text 'END'
     settextstyle(6, 0, 2);
-    outtextxy(300, 243, "END");
+    //outtextxy(300, 243, "END");
 }
 
 
@@ -403,6 +403,8 @@ void game(){
             dicerolling();
             sprintf(arr,"PLAYER 1 DICE ROLL IS %d",rn);
             outtextxy(220,18,arr);
+            sprintf(arr,"%d",rn);
+            outtextxy(320, 243, arr);
         }
 
         if(rn==6 && f1==0){
@@ -421,6 +423,8 @@ void game(){
             dicerolling();
             sprintf(arr,"PLAYER 1 DICE ROLL IS %d",rn);
             outtextxy(220,18,arr);
+            sprintf(arr,"%d",rn);
+            outtextxy(320, 243, arr);
 
             if(cntt1[0]==0){
 
@@ -466,6 +470,8 @@ void game(){
                             dicerolling();
                             sprintf(arr,"PLAYER 1 DICE ROLL IS %d",rn);
                             outtextxy(220,15,arr);
+                            sprintf(arr,"%d",rn);
+                            outtextxy(320, 243, arr);
 
                         }
 
@@ -480,6 +486,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 1 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
 
                             }
 
@@ -492,6 +500,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 1 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
 
                             }
 
@@ -531,6 +541,8 @@ void game(){
                     dicerolling();
                     sprintf(arr,"PLAYER 1 DICE ROLL IS %d",rn);
                     outtextxy(220,15,arr);
+                    sprintf(arr,"%d",rn);
+                    outtextxy(320, 243, arr);
                 }
                 else{
 
@@ -550,6 +562,8 @@ void game(){
                             dicerolling();
                             sprintf(arr,"PLAYER 1 DICE ROLL IS %d",rn);
                             outtextxy(220,15,arr);
+                            sprintf(arr,"%d",rn);
+                            outtextxy(320, 243, arr);
                         }
                         else if(status1[1] == 1 && fg1[1]!=1){
                                 outtextxy(player1x[1][cnt1[1]-1]-6,player1y[1][cnt1[1]-1]-8,"  ");
@@ -567,6 +581,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 1 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
                         }
 
                 }
@@ -656,6 +672,8 @@ void game(){
             dicerolling();
             sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
             outtextxy(220,18,arr);
+            sprintf(arr,"%d",rn);
+            outtextxy(320, 243, arr);
         }
 
         if(rn==6 && f2==0){
@@ -674,6 +692,8 @@ void game(){
             dicerolling();
             sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
             outtextxy(220,18,arr);
+            sprintf(arr,"%d",rn);
+            outtextxy(320, 243, arr);
 
             if(cntt2[0]==0){
 
@@ -718,6 +738,8 @@ void game(){
                             dicerolling();
                             sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
                             outtextxy(220,15,arr);
+                            sprintf(arr,"%d",rn);
+                            outtextxy(320, 243, arr);
 
                         }
 
@@ -733,6 +755,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
 
                             }
 
@@ -746,6 +770,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
 
                             }
 
@@ -784,6 +810,8 @@ void game(){
                     dicerolling();
                     sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
                     outtextxy(220,15,arr);
+                    sprintf(arr,"%d",rn);
+                    outtextxy(320, 243, arr);
                 }
                 else{
 
@@ -801,6 +829,8 @@ void game(){
                             dicerolling();
                             sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
                             outtextxy(220,15,arr);
+                            sprintf(arr,"%d",rn);
+                            outtextxy(320, 243, arr);
                         }
                         else if(status2[1] == 1 && fg2[1]!=1){
                                 outtextxy(player2x[1][cnt2[1]-1]-6,player2y[1][cnt2[1]-1]-8,"  ");
@@ -815,6 +845,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 2 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
                         }
 
 
@@ -895,6 +927,8 @@ void game(){
             dicerolling();
             sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
             outtextxy(220,18,arr);
+            sprintf(arr,"%d",rn);
+            outtextxy(320, 243, arr);
         }
 
         if(rn==6 && f3==0){
@@ -913,6 +947,8 @@ void game(){
             dicerolling();
             sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
             outtextxy(220,18,arr);
+            sprintf(arr,"%d",rn);
+            outtextxy(320, 243, arr);
 
             if(cntt3[0]==0){
 
@@ -958,6 +994,8 @@ void game(){
                             dicerolling();
                             sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
                             outtextxy(220,15,arr);
+                            sprintf(arr,"%d",rn);
+                            outtextxy(320, 243, arr);
 
                         }
 
@@ -972,6 +1010,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
 
                             }
 
@@ -984,6 +1024,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
 
                             }
 
@@ -1021,6 +1063,8 @@ void game(){
                     dicerolling();
                     sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
                     outtextxy(220,15,arr);
+                    sprintf(arr,"%d",rn);
+                    outtextxy(320, 243, arr);
                 }
                 else{
 
@@ -1037,6 +1081,8 @@ void game(){
                             dicerolling();
                             sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
                             outtextxy(220,15,arr);
+                            sprintf(arr,"%d",rn);
+                            outtextxy(320, 243, arr);
                         }
                         else if(status3[1] == 1 && fg3[1]!=1){
                                 outtextxy(player3x[1][cnt3[1]-1]-6,player3y[1][cnt3[1]-1]-8,"  ");
@@ -1048,6 +1094,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 3 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
                         }
 
                 }
@@ -1129,6 +1177,8 @@ void game(){
             dicerolling();
             sprintf(arr,"PLAYER 4 DICE ROLL IS %d",rn);
             outtextxy(220,18,arr);
+            sprintf(arr,"%d",rn);
+            outtextxy(320, 243, arr);
         }
 
         if(rn==6 && f4==0){
@@ -1147,6 +1197,8 @@ void game(){
             dicerolling();
             sprintf(arr,"PLAYER 4 DICE ROLL IS %d",rn);
             outtextxy(220,18,arr);
+            sprintf(arr,"%d",rn);
+            outtextxy(320, 243, arr);
 
             if(cntt4[0]==0){
                 outtextxy(275-6,421-8,"  ");
@@ -1190,6 +1242,8 @@ void game(){
                             dicerolling();
                             sprintf(arr,"PLAYER 4 DICE ROLL IS %d",rn);
                             outtextxy(220,15,arr);
+                            sprintf(arr,"%d",rn);
+                            outtextxy(320, 243, arr);
 
                         }
 
@@ -1204,6 +1258,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 4 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
 
                             }
 
@@ -1216,6 +1272,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 4 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
 
                             }
 
@@ -1255,6 +1313,8 @@ void game(){
                     dicerolling();
                     sprintf(arr,"PLAYER 4 DICE ROLL IS %d",rn);
                     outtextxy(220,15,arr);
+                    sprintf(arr,"%d",rn);
+                    outtextxy(320, 243, arr);
                 }
                 else{
 
@@ -1272,6 +1332,8 @@ void game(){
                             dicerolling();
                             sprintf(arr,"PLAYER 4 DICE ROLL IS %d",rn);
                             outtextxy(220,15,arr);
+                            sprintf(arr,"%d",rn);
+                            outtextxy(320, 243, arr);
                         }
                         else if(status4[1] == 1 && fg4[1]!=1){
                                 outtextxy(player4x[1][cnt4[1]-1]-6,player4y[1][cnt4[1]-1]-8,"  ");
@@ -1286,6 +1348,8 @@ void game(){
                                 dicerolling();
                                 sprintf(arr,"PLAYER 4 DICE ROLL IS %d",rn);
                                 outtextxy(220,15,arr);
+                                sprintf(arr,"%d",rn);
+                                outtextxy(320, 243, arr);
                         }
 
 
@@ -1371,7 +1435,12 @@ void game(){
      }
 
 
-     if(fg1[0]==1 && fg2[0]==1 && fg1[1]==1 && fg2[1] == 1 && fg3[0]==1 && fg3[1]==1 && fg4[0]==1 && fg4[1]==1){
+     /*if(fg1[0]==1 && fg2[0]==1 && fg1[1]==1 && fg2[1] == 1 && fg3[0]==1 && fg3[1]==1 && fg4[0]==1 && fg4[1]==1){
+        cleardevice();
+        break;
+     }*/
+
+     if(winnerp[2]!= 0){
         cleardevice();
         break;
      }
@@ -1383,13 +1452,13 @@ void game(){
         printf("%d\n",winnerp[i]);
     }
     sprintf(arr,"PLAYER%d => WINNER",winnerp[0]);
-    outtextxy(70,70,arr);
+    outtextxy(60,110,arr);
     sprintf(arr,"PLAYER%d => FIRST RUNNER UP",winnerp[1]);
-    outtextxy(70,90,arr);
+    outtextxy(60,130,arr);
     sprintf(arr,"PLAYER%d => SECOND RUNNER UP",winnerp[2]);
-    outtextxy(70,110,arr);
+    outtextxy(60,150,arr);
     sprintf(arr,"PLAYER%d => NEXT TIME TRY YOUR BEST",winnerp[3]);
-    outtextxy(70,130,arr);
+    outtextxy(60,170,arr);
     delay(500);
     getch();
 }
@@ -1400,7 +1469,9 @@ void player1(int n){
     int i;
 
     if((currentPos1x[n]>=62) && (currentPos1y[n] == 252) && (currentPos1x[n]<281)){
-        endl1[n]=1;
+
+        printf("%d\n",endl1[n]);
+        //printf("the posion in final path: %d\n", currentPos1x[n]);
         cntg1[n]=cnt1[n];
         for(i=0; i<rn; i++){
 
@@ -1409,13 +1480,13 @@ void player1(int n){
         }
 
         if((player1x[n][cntg1[n]-1]==266) && (player1y[n][cntg1[n]-1]==252)){
-
+            //endl1[n]=1;
             setfillstyle(SOLID_FILL,GREEN);
             circle(player1x[n][cntg1[n]-1],player1y[n][cntg1[n]-1],6);
             floodfill(player1x[n][cntg1[n]-1],player1y[n][cntg1[n]-1],15);
             //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
 
-            //printf("the posion in final path: %d\n", player1x[0][cntg1[0]-1]);
+
 
 
             //getch();
@@ -1425,7 +1496,7 @@ void player1(int n){
         }
 
         else if((player1x[n][cntg1[n]-1]<266) && (player1y[n][cntg1[n]-1]==252)){
-
+            //endl1[n]=1;
             if(rn == 6 && n == 1){
                 //dicerolling();
                 outtextxy(player1x[n][cnt1[n]-1]-6,player1y[n][cnt1[n]-1]-8,"  ");
@@ -1446,7 +1517,7 @@ void player1(int n){
         }
 
         else if((player1x[n][cntg1[n]-1]>266) && (player1y[n][cntg1[n]-1]==252)){
-
+            //endl1[n]=1;
             setfillstyle(SOLID_FILL,GREEN);
             circle(player1x[n][cnt1[n]-1],player1y[n][cnt1[n]-1],6);
             floodfill(player1x[n][cnt1[n]-1],player1y[n][cnt1[n]-1],15);
@@ -1462,6 +1533,9 @@ void player1(int n){
             cnt1[n]++;
             currentPos1x[n] = player1x[n][cnt1[n]-1];
             currentPos1y[n] = player1y[n][cnt1[n]-1];
+            if(currentPos1x[n]==62 && currentPos1y[n]==252){
+                endl1[n] = 1;
+            }
 
         }
         setfillstyle(SOLID_FILL,GREEN);
@@ -1477,7 +1551,7 @@ void player2(int n){
     int i;
 
     if((currentPos2x[n] == 326) && (currentPos2y[n] >= 57) && (currentPos2y[n]<235)){
-        endl2[n]=1;
+
         cntg2[n]=cnt2[n];
         for(i=0; i<rn; i++){
 
@@ -1486,7 +1560,7 @@ void player2(int n){
         }
 
         if((player2x[n][cntg2[n]-1]==326) && (player2y[n][cntg2[n]-1] == 215)){
-
+            //endl2[n]=1;
             setfillstyle(SOLID_FILL,YELLOW);
             circle(player2x[n][cntg2[n]-1],player2y[n][cntg2[n]-1],6);
             floodfill(player2x[n][cntg2[n]-1],player2y[n][cntg2[n]-1],15);
@@ -1498,7 +1572,7 @@ void player2(int n){
         }
 
         else if((player2x[n][cntg2[n]-1] ==326) && (player2y[n][cntg2[n]-1] <= 187)){
-
+            //endl2[n]=1;
             if(rn == 6 && n == 1){
                 outtextxy(player2x[n][cnt2[n]-1]-6,player2y[n][cnt2[n]-1]-8,"  ");
 
@@ -1515,7 +1589,7 @@ void player2(int n){
         }
 
         else if((player2x[n][cntg2[n]-1] == 326) && (player2y[n][cntg2[n]-1] >215)){
-
+            //endl2[n]=1;
             setfillstyle(SOLID_FILL,YELLOW);
             circle(player2x[n][cnt2[n]-1],player2y[n][cnt2[n]-1],6);
             floodfill(player2x[n][cnt2[n]-1],player2y[n][cnt2[n]-1],15);
@@ -1531,6 +1605,9 @@ void player2(int n){
             cnt2[n]++;
             currentPos2x[n] = player2x[n][cnt2[n]-1];
             currentPos2y[n] = player2y[n][cnt2[n]-1];
+            if(currentPos2y[n]==57 && currentPos2x[n]==326){
+                endl2[n] = 1;
+            }
 
         }
         setfillstyle(SOLID_FILL,YELLOW);
@@ -1545,7 +1622,7 @@ void player3(int n){
     int i;
 
     if((currentPos3x[n]<=590) && (currentPos3y[n] == 252) && (currentPos3x[n]>378)){
-        endl3[n]=1;
+
         cntg3[n]=cnt3[n];
         for(i=0; i<rn; i++){
 
@@ -1554,7 +1631,7 @@ void player3(int n){
         }
 
         if((player3x[n][cntg3[n]-1]==386) && (player3y[n][cntg3[n]-1]==252)){
-
+            //endl3[n]=1;
             setfillstyle(SOLID_FILL,BLUE);
             circle(player3x[n][cntg3[n]-1],player3y[n][cntg3[n]-1],6);
             floodfill(player3x[n][cntg3[n]-1],player3y[n][cntg3[n]-1],15);
@@ -1566,7 +1643,7 @@ void player3(int n){
         }
 
         else if((player3x[n][cntg3[n]-1] >= 420) && (player3y[n][cntg3[n]-1]==252)){
-
+            //endl3[n]=1;
             if(rn == 6 && n == 1){
                 outtextxy(player3x[n][cnt3[n]-1]-6,player3y[n][cnt3[n]-1]-8,"  ");
 
@@ -1585,7 +1662,7 @@ void player3(int n){
         }
 
         else if((player3x[n][cntg3[n]-1]<386) && (player3y[n][cntg3[n]-1]==252)){
-
+            //endl3[n]=1;
             setfillstyle(SOLID_FILL,BLUE);
             circle(player3x[n][cnt3[n]-1],player3y[n][cnt3[n]-1],6);
             floodfill(player3x[n][cnt3[n]-1],player3y[n][cnt3[n]-1],15);
@@ -1601,6 +1678,9 @@ void player3(int n){
             cnt3[n]++;
             currentPos3x[n] = player3x[n][cnt3[n]-1];
             currentPos3y[n] = player3y[n][cnt3[n]-1];
+            if(currentPos3x[n]==590 && currentPos3y[n]==252){
+                endl3[n] = 1;
+            }
 
         }
         setfillstyle(SOLID_FILL,BLUE);
@@ -1614,8 +1694,8 @@ void player4(int n){
 
     int i;
 
-    if((currentPos4x[n] == 326) && (currentPos4y[n] <= 477) && (currentPos4y[n]>280)){
-        endl4[n]=1;
+    if((currentPos4x[n] == 326) && (currentPos4y[n] <= 447) && (currentPos4y[n]>280)){
+
         cntg4[n]=cnt4[n];
         for(i=0; i<rn; i++){
 
@@ -1624,7 +1704,7 @@ void player4(int n){
         }
 
         if((player4x[n][cntg4[n]-1]==326) && (player4y[n][cntg4[n]-1] == 285)){
-
+            //endl4[n]=1;
             setfillstyle(SOLID_FILL,RED);
             circle(player4x[n][cntg4[n]-1],player4y[n][cntg4[n]-1],6);
             floodfill(player4x[n][cntg4[n]-1],player4y[n][cntg4[n]-1],15);
@@ -1636,7 +1716,7 @@ void player4(int n){
         }
 
         else if((player4x[n][cntg4[n]-1] ==326) && (player4y[n][cntg4[n]-1] >= 317)){
-
+            //endl4[n]=1;
             if(rn == 6 && n == 1){
                 outtextxy(player4x[n][cnt4[n]-1]-6,player4y[n][cnt4[n]-1]-8,"  ");
 
@@ -1652,7 +1732,7 @@ void player4(int n){
         }
 
         else if((player4x[n][cntg4[n]-1] == 326) && (player4y[n][cntg4[n]-1] < 285)){
-
+            //endl4[n]=1;
             setfillstyle(SOLID_FILL,RED);
             circle(player4x[n][cnt4[n]-1],player4y[n][cnt4[n]-1],6);
             floodfill(player4x[n][cnt4[n]-1],player4y[n][cnt4[n]-1],15);
@@ -1668,6 +1748,9 @@ void player4(int n){
             cnt4[n]++;
             currentPos4x[n] = player4x[n][cnt4[n]-1];
             currentPos4y[n] = player4y[n][cnt4[n]-1];
+            if(currentPos4y[n]==447 && currentPos4x[n]==326){
+                endl4[n] = 1;
+            }
 
         }
         setfillstyle(SOLID_FILL,RED);
@@ -1679,8 +1762,9 @@ void player4(int n){
 
 void cutting1(int n){
 
-        if((currentPos1x[n] == currentPos2x[0])  && (currentPos1y[n] == currentPos2y[0])&& endl2[0]==0){
-
+        if((currentPos1x[n] == currentPos2x[0])  && (currentPos1y[n] == currentPos2y[0])&& endl2[0]!=1 && endl1[n]!=1){
+            printf("%d\n",currentPos2y[0]);
+            printf("%d\n", endl2[0]);
             status2[0]=0;
             cntt2[0]=0;
             cnt2[0]=0;
@@ -1692,8 +1776,9 @@ void cutting1(int n){
             }
 
         }
-        else if((currentPos1x[n] == currentPos2x[1])  && (currentPos1y[n] == currentPos2y[1])&& endl2[1]==0){
-
+        if((currentPos1x[n] == currentPos2x[1])  && (currentPos1y[n] == currentPos2y[1])&& endl2[1]!=1 && endl1[n]!=1){
+                printf("%d\n",currentPos2y[1]);
+            printf("%d\n", endl2[1]);
                status2[1]=0;
                cntt2[1]=0;
                cnt2[1]=0;
@@ -1705,8 +1790,9 @@ void cutting1(int n){
                }
 
         }
-        else if((currentPos1x[n] == currentPos3x[0])  && (currentPos1y[n] == currentPos3y[0])&& endl3[0]==0){
-
+        if((currentPos1x[n] == currentPos3x[0])  && (currentPos1y[n] == currentPos3y[0])&& endl3[0]!=1 && endl1[n]!=1){
+            printf("%d\n",currentPos3x[0]);
+            printf("%d\n", endl3[0]);
             status3[0]=0;
             cntt3[0]=0;
             cnt3[0]=0;
@@ -1718,8 +1804,9 @@ void cutting1(int n){
             }
 
         }
-        else if((currentPos1x[n] == currentPos3x[1])  && (currentPos1y[n] == currentPos3y[1])&& endl3[1]==0){
-
+        if((currentPos1x[n] == currentPos3x[1])  && (currentPos1y[n] == currentPos3y[1])&& endl3[1]!=1 && endl1[n]!=1){
+            printf("%d\n",currentPos3x[1]);
+            printf("%d\n", endl3[1]);
             status3[1]=0;
             cntt3[1]=0;
             cnt3[1]=0;
@@ -1731,8 +1818,9 @@ void cutting1(int n){
             }
 
         }
-        else if((currentPos1x[n] == currentPos4x[0])  && (currentPos1y[n] == currentPos4y[0])&& endl4[0]==0){
-
+        if((currentPos1x[n] == currentPos4x[0])  && (currentPos1y[n] == currentPos4y[0])&& endl4[0]!=1 && endl1[n]!=1){
+                printf("%d\n",currentPos4y[0]);
+            printf("%d\n", endl4[0]);
                status4[0]=0;
                cntt4[0]=0;
                cnt4[0]=0;
@@ -1744,8 +1832,9 @@ void cutting1(int n){
                }
 
         }
-        else if((currentPos1x[n] == currentPos4x[1])  && (currentPos1y[n] == currentPos4y[1])&& endl4[1]==0){
-
+        if((currentPos1x[n] == currentPos4x[1])  && (currentPos1y[n] == currentPos4y[1])&& endl4[1]!=1 && endl1[n]!=1){
+                printf("%d\n",currentPos4y[1]);
+                printf("%d\n", endl4[1]);
                status4[1]=0;
                cntt4[1]=0;
                cnt4[1]=0;
@@ -1762,7 +1851,9 @@ void cutting1(int n){
 
 void cutting2(int n){
 
-        if((currentPos2x[n] == currentPos1x[0]) && (currentPos2y[n] == currentPos1y[0])&& endl1[0]==0){
+        if((currentPos2x[n] == currentPos1x[0]) && (currentPos2y[n] == currentPos1y[0])&& endl1[0]!=1 && endl2[n]!=1){
+            printf("%d\n",currentPos1x[0]);
+                printf("%d\n", endl1[0]);
             status1[0] = 0;
             cntt1[0]=0;
             cnt1[0]=0;
@@ -1774,8 +1865,9 @@ void cutting2(int n){
             }
 
         }
-        else if((currentPos2x[n] == currentPos1x[1]) && (currentPos2y[n] == currentPos1y[1])&& endl1[1]==0){
-
+        if((currentPos2x[n] == currentPos1x[1]) && (currentPos2y[n] == currentPos1y[1])&& endl1[1]!=1 && endl2[n]!=1){
+            printf("%d\n",currentPos1x[1]);
+                printf("%d\n", endl1[1]);
             status1[1] = 0;
             cntt1[1]=0;
             cnt1[1]=0;
@@ -1787,8 +1879,9 @@ void cutting2(int n){
             }
 
         }
-        else if((currentPos2x[n] == currentPos3x[0])  && (currentPos2y[n] == currentPos3y[0])&& endl3[0]==0){
-
+        if((currentPos2x[n] == currentPos3x[0])  && (currentPos2y[n] == currentPos3y[0])&& endl3[0]!=1 && endl2[n]!=1){
+            printf("%d\n",currentPos3x[0]);
+            printf("%d\n", endl3[0]);
             status3[0]=0;
             cntt3[0]=0;
             cnt3[0]=0;
@@ -1800,8 +1893,9 @@ void cutting2(int n){
             }
 
         }
-        else if((currentPos2x[n] == currentPos3x[1])  && (currentPos2y[n] == currentPos3y[1])&& endl3[1]==0){
-
+        if((currentPos2x[n] == currentPos3x[1])  && (currentPos2y[n] == currentPos3y[1])&& endl3[1]!=1 && endl2[n]!=1){
+            printf("%d\n",currentPos3x[1]);
+            printf("%d\n", endl3[1]);
             status3[1]=0;
             cntt3[1]=0;
             cnt3[1]=0;
@@ -1814,8 +1908,9 @@ void cutting2(int n){
 
         }
 
-        else if((currentPos2x[n] == currentPos4x[0]) && (currentPos2y[n] == currentPos4y[0])&& endl4[0]==0){
-
+        if((currentPos2x[n] == currentPos4x[0]) && (currentPos2y[n] == currentPos4y[0])&& endl4[0]!=1 && endl2[n]!=1){
+                printf("%d\n",currentPos4y[0]);
+            printf("%d\n", endl4[0]);
                 status4[0]=0;
                cntt4[0]=0;
                cnt4[0]=0;
@@ -1827,8 +1922,9 @@ void cutting2(int n){
                }
 
         }
-        else if((currentPos2x[n] == currentPos4x[1])  && (currentPos2y[n] == currentPos4y[1])&& endl4[1]==0){
-
+        if((currentPos2x[n] == currentPos4x[1])  && (currentPos2y[n] == currentPos4y[1])&& endl4[1]!=1 && endl2[n]!=1){
+                printf("%d\n",currentPos4y[1]);
+            printf("%d\n", endl4[1]);
                status4[1]=0;
                cntt4[1]=0;
                cnt4[1]=0;
@@ -1844,7 +1940,9 @@ void cutting2(int n){
 }
 
 void cutting3(int n){
-        if((currentPos3x[n] == currentPos1x[0]) && (currentPos3y[n] == currentPos1y[0])&& endl1[0]==0){
+        if((currentPos3x[n] == currentPos1x[0]) && (currentPos3y[n] == currentPos1y[0])&& endl1[0]!=1 && endl3[n]!=1){
+            printf("%d\n",currentPos1x[0]);
+                printf("%d\n", endl1[0]);
             status1[0] = 0;
             cntt1[0]=0;
             cnt1[0]=0;
@@ -1856,7 +1954,9 @@ void cutting3(int n){
             }
 
         }
-        else if((currentPos3x[n] == currentPos1x[1]) && (currentPos3y[n] == currentPos1y[1])&& endl1[1]==0){
+        if((currentPos3x[n] == currentPos1x[1]) && (currentPos3y[n] == currentPos1y[1])&& endl1[1]!=1 && endl3[n]!=1){
+            printf("%d\n",currentPos1x[1]);
+                printf("%d\n", endl1[1]);
             status1[1] = 0;
             cntt1[1]=0;
             cnt1[1]=0;
@@ -1868,8 +1968,9 @@ void cutting3(int n){
             }
 
         }
-        else if((currentPos3x[n] == currentPos2x[0])  && (currentPos3y[n] == currentPos2y[0])&& endl2[0]==0){
-
+        if((currentPos3x[n] == currentPos2x[0])  && (currentPos3y[n] == currentPos2y[0])&& endl2[0]!=1 && endl3[n]!=1){
+                printf("%d\n",currentPos2y[0]);
+            printf("%d\n", endl2[0]);
                 status2[0]=0;
                 cntt2[0]=0;
                 cnt2[0]=0;
@@ -1881,7 +1982,9 @@ void cutting3(int n){
                 }
 
         }
-        else if((currentPos3x[n] == currentPos2x[1])  && (currentPos3y[n] == currentPos2y[1])&& endl2[1]==0){
+        if((currentPos3x[n] == currentPos2x[1])  && (currentPos3y[n] == currentPos2y[1])&& endl2[1]!=1 && endl3[n]!=1){
+            printf("%d\n",currentPos2y[1]);
+            printf("%d\n", endl2[1]);
                status2[1]=0;
                cntt2[1]=0;
                cnt2[1]=0;
@@ -1894,8 +1997,9 @@ void cutting3(int n){
 
         }
 
-        else if((currentPos3x[n] == currentPos4x[0])  && (currentPos3y[n] == currentPos4y[0])&& endl4[0]==0){
-
+        if((currentPos3x[n] == currentPos4x[0])  && (currentPos3y[n] == currentPos4y[0])&& endl4[0]!=1 && endl3[n]!=1){
+                printf("%d\n",currentPos4y[0]);
+            printf("%d\n", endl4[0]);
                status4[0]=0;
                cntt4[0]=0;
                cnt4[0]=0;
@@ -1907,7 +2011,9 @@ void cutting3(int n){
                }
 
         }
-        else if((currentPos3x[n] == currentPos4x[1])  && (currentPos3y[n] == currentPos4y[1])&& endl4[1]==0){
+        if((currentPos3x[n] == currentPos4x[1])  && (currentPos3y[n] == currentPos4y[1])&& endl4[1]!=1 && endl3[n]!=1){
+                printf("%d\n",currentPos4y[1]);
+                printf("%d\n", endl4[1]);
                status4[1]=0;
                cntt4[1]=0;
                cnt4[1]=0;
@@ -1925,7 +2031,9 @@ void cutting3(int n){
 
 void cutting4(int n){
 
-     if((currentPos4x[n] == currentPos1x[0]) && (currentPos4y[n] == currentPos1y[0])&& endl1[0]==0){
+     if((currentPos4x[n] == currentPos1x[0]) && (currentPos4y[n] == currentPos1y[0])&& endl1[0]!=1 && endl4[n]!=1){
+                printf("%d\n",currentPos1x[0]);
+                printf("%d\n", endl1[0]);
                 status1[0] = 0;
                 cntt1[0]=0;
                 cnt1[0]=0;
@@ -1937,7 +2045,9 @@ void cutting4(int n){
                 }
 
         }
-        else if((currentPos4x[n] == currentPos1x[1]) && (currentPos4y[n] == currentPos1y[1])&& endl1[1]==0){
+        if((currentPos4x[n] == currentPos1x[1]) && (currentPos4y[n] == currentPos1y[1])&& endl1[1]==0 && endl4[n]==0){
+            printf("%d\n",currentPos1x[1]);
+                printf("%d\n", endl1[1]);
             status1[1] = 0;
             cntt1[1]=0;
             cnt1[1]=0;
@@ -1949,8 +2059,9 @@ void cutting4(int n){
             }
 
         }
-        else if((currentPos4x[n] == currentPos3x[0])  && (currentPos4y[n] == currentPos3y[0])&& endl3[0]==0){
-
+        if((currentPos4x[n] == currentPos3x[0])  && (currentPos4y[n] == currentPos3y[0])&& endl3[0]!=1 && endl4[n]!=1){
+            printf("%d\n",currentPos3x[0]);
+            printf("%d\n", endl3[0]);
             status3[0]=0;
             cntt3[0]=0;
             cnt3[0]=0;
@@ -1962,8 +2073,9 @@ void cutting4(int n){
             }
 
         }
-        else if((currentPos4x[n] == currentPos3x[1])  && (currentPos4y[n] == currentPos3y[1])&& endl3[1]==0){
-
+        if((currentPos4x[n] == currentPos3x[1])  && (currentPos4y[n] == currentPos3y[1])&& endl3[1]!=1 && endl4[n]!=1){
+            printf("%d\n",currentPos3x[1]);
+            printf("%d\n", endl3[1]);
             status3[1]=0;
             cntt3[1]=0;
             cnt3[1]=0;
@@ -1975,8 +2087,9 @@ void cutting4(int n){
             }
 
         }
-        else if((currentPos4x[n] == currentPos2x[0])  && (currentPos4y[n] == currentPos2y[0])&& endl2[0]==0){
-
+        if((currentPos4x[n] == currentPos2x[0])  && (currentPos4y[n] == currentPos2y[0])&& endl2[0]!=1 && endl4[n]!=1){
+                printf("%d\n",currentPos2y[0]);
+            printf("%d\n", endl2[0]);
                 status2[0]=0;
                 cntt2[0]=0;
                 cnt2[0]=0;
@@ -1988,7 +2101,9 @@ void cutting4(int n){
                 }
 
         }
-        else if((currentPos4x[n] == currentPos2x[1])  && (currentPos4y[n] == currentPos2y[1])&& endl2[1]==0){
+        if((currentPos4x[n] == currentPos2x[1])  && (currentPos4y[n] == currentPos2y[1])&& endl2[1]!=1 && endl4[n]!=1){
+                printf("%d\n",currentPos2y[1]);
+                printf("%d\n", endl2[1]);
                status2[1]=0;
                cntt2[1]=0;
                cnt2[1]=0;
