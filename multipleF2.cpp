@@ -1768,6 +1768,8 @@ void cutting1(int n){
             status2[0]=0;
             cntt2[0]=0;
             cnt2[0]=0;
+            currentPos2x[0]=0;
+            currentPos2y[0]=0;
             setfillstyle(SOLID_FILL,YELLOW);
             circle(377,83,6); ///p2 stop point
             floodfill(377,83,15);
@@ -1782,6 +1784,8 @@ void cutting1(int n){
                status2[1]=0;
                cntt2[1]=0;
                cnt2[1]=0;
+               currentPos2x[1]=0;
+               currentPos2y[1]=0;
                setfillstyle(SOLID_FILL,YELLOW);
                circle(377,83,6); ///p2 stop point
                floodfill(377,83,15);
@@ -1796,6 +1800,8 @@ void cutting1(int n){
             status3[0]=0;
             cntt3[0]=0;
             cnt3[0]=0;
+            currentPos3x[0]=0;
+            currentPos3y[0]=0;
             setfillstyle(SOLID_FILL,BLUE);
             circle(556,287,6);  ///p3 stop point
             floodfill(556,287,15);
@@ -1810,6 +1816,8 @@ void cutting1(int n){
             status3[1]=0;
             cntt3[1]=0;
             cnt3[1]=0;
+            currentPos3x[1]=0;
+            currentPos3y[1]=0;
             setfillstyle(SOLID_FILL,BLUE);
             circle(556,287,6);  ///p3 stop point
             floodfill(556,287,15);
@@ -1824,6 +1832,8 @@ void cutting1(int n){
                status4[0]=0;
                cntt4[0]=0;
                cnt4[0]=0;
+               currentPos4x[0]=0;
+               currentPos4y[0]=0;
                setfillstyle(SOLID_FILL,RED);
                circle(275,421,6);  ///p4 stop point
                floodfill(275,421,15);
@@ -1838,6 +1848,8 @@ void cutting1(int n){
                status4[1]=0;
                cntt4[1]=0;
                cnt4[1]=0;
+               currentPos4x[1]=0;
+               currentPos4y[1]=0;
                setfillstyle(SOLID_FILL,RED);
                circle(275,421,6);  ///p4 stop point
                floodfill(275,421,15);
@@ -1857,6 +1869,8 @@ void cutting2(int n){
             status1[0] = 0;
             cntt1[0]=0;
             cnt1[0]=0;
+            currentPos1x[0]=0;
+            currentPos1y[0]=0;
             setfillstyle(SOLID_FILL,GREEN);
             circle(96,217,6); ///p1 stop point
             floodfill(96,217,15);
@@ -1871,6 +1885,8 @@ void cutting2(int n){
             status1[1] = 0;
             cntt1[1]=0;
             cnt1[1]=0;
+            currentPos1x[1]=0;
+            currentPos1y[1]=0;
             setfillstyle(SOLID_FILL,GREEN);
             circle(96,217,6); ///p1 stop point
             floodfill(96,217,15);
@@ -1885,6 +1901,8 @@ void cutting2(int n){
             status3[0]=0;
             cntt3[0]=0;
             cnt3[0]=0;
+            currentPos3x[0]=0;
+            currentPos3y[0]=0;
             setfillstyle(SOLID_FILL,BLUE);
             circle(556,287,6);  ///p3 stop point
             floodfill(556,287,15);
@@ -1899,6 +1917,8 @@ void cutting2(int n){
             status3[1]=0;
             cntt3[1]=0;
             cnt3[1]=0;
+            currentPos3x[1]=0;
+            currentPos3y[1]=0;
             setfillstyle(SOLID_FILL,BLUE);
             circle(556,287,6);  ///p3 stop point
             floodfill(556,287,15);
@@ -1914,6 +1934,8 @@ void cutting2(int n){
                 status4[0]=0;
                cntt4[0]=0;
                cnt4[0]=0;
+               currentPos4x[0]=0;
+               currentPos4y[0]=0;
                setfillstyle(SOLID_FILL,RED);
                circle(275,421,6);  ///p4 stop point
                floodfill(275,421,15);
@@ -1928,6 +1950,8 @@ void cutting2(int n){
                status4[1]=0;
                cntt4[1]=0;
                cnt4[1]=0;
+               currentPos4x[1]=0;
+               currentPos4y[1]=0;
                setfillstyle(SOLID_FILL,RED);
                circle(275,421,6);  ///p4 stop point
                floodfill(275,421,15);
@@ -1946,6 +1970,8 @@ void cutting3(int n){
             status1[0] = 0;
             cntt1[0]=0;
             cnt1[0]=0;
+            currentPos1x[0]=0;
+            currentPos1y[0]=0;
             setfillstyle(SOLID_FILL,GREEN);
             circle(96,217,6); ///p1 stop point
             floodfill(96,217,15);
@@ -1960,6 +1986,8 @@ void cutting3(int n){
             status1[1] = 0;
             cntt1[1]=0;
             cnt1[1]=0;
+            currentPos1x[1]=0;
+            currentPos1y[1]=0;
             setfillstyle(SOLID_FILL,GREEN);
             circle(96,217,6); ///p1 stop point
             floodfill(96,217,15);
@@ -1974,6 +2002,8 @@ void cutting3(int n){
                 status2[0]=0;
                 cntt2[0]=0;
                 cnt2[0]=0;
+                currentPos2x[0]=0;
+                currentPos2y[0]=0;
                 setfillstyle(SOLID_FILL,YELLOW);
                 circle(377,83,6); ///p2 stop point
                 floodfill(377,83,15);
@@ -1988,6 +2018,8 @@ void cutting3(int n){
                status2[1]=0;
                cntt2[1]=0;
                cnt2[1]=0;
+               currentPos2x[1]=0;
+                currentPos2y[1]=0;
                setfillstyle(SOLID_FILL,YELLOW);
                circle(377,83,6); ///p2 stop point
                floodfill(377,83,15);
@@ -2003,6 +2035,8 @@ void cutting3(int n){
                status4[0]=0;
                cntt4[0]=0;
                cnt4[0]=0;
+               currentPos4x[0]=0;
+               currentPos4y[0]=0;
                setfillstyle(SOLID_FILL,RED);
                circle(275,421,6);  ///p4 stop point
                floodfill(275,421,15);
@@ -2017,6 +2051,8 @@ void cutting3(int n){
                status4[1]=0;
                cntt4[1]=0;
                cnt4[1]=0;
+               currentPos4x[1]=0;
+               currentPos4y[1]=0;
                setfillstyle(SOLID_FILL,RED);
                circle(275,421,6);  ///p4 stop point
                floodfill(275,421,15);
@@ -2037,6 +2073,8 @@ void cutting4(int n){
                 status1[0] = 0;
                 cntt1[0]=0;
                 cnt1[0]=0;
+                currentPos1x[0]=0;
+                currentPos1y[0]=0;
                 setfillstyle(SOLID_FILL,GREEN);
                 circle(96,217,6); ///p1 stop point
                 floodfill(96,217,15);
@@ -2051,6 +2089,8 @@ void cutting4(int n){
             status1[1] = 0;
             cntt1[1]=0;
             cnt1[1]=0;
+            currentPos1x[1]=0;
+            currentPos1y[1]=0;
             setfillstyle(SOLID_FILL,GREEN);
             circle(96,217,6); ///p1 stop point
             floodfill(96,217,15);
@@ -2065,6 +2105,8 @@ void cutting4(int n){
             status3[0]=0;
             cntt3[0]=0;
             cnt3[0]=0;
+            currentPos3x[0]=0;
+            currentPos3y[0]=0;
             setfillstyle(SOLID_FILL,BLUE);
             circle(556,287,6);  ///p3 stop point
             floodfill(556,287,15);
@@ -2079,6 +2121,8 @@ void cutting4(int n){
             status3[1]=0;
             cntt3[1]=0;
             cnt3[1]=0;
+            currentPos3x[1]=0;
+            currentPos3y[1]=0;
             setfillstyle(SOLID_FILL,BLUE);
             circle(556,287,6);  ///p3 stop point
             floodfill(556,287,15);
@@ -2093,6 +2137,8 @@ void cutting4(int n){
                 status2[0]=0;
                 cntt2[0]=0;
                 cnt2[0]=0;
+                currentPos2x[0]=0;
+                currentPos2y[0]=0;
                 setfillstyle(SOLID_FILL,YELLOW);
                 circle(377,83,6); ///p2 stop point
                 floodfill(377,83,15);
@@ -2107,6 +2153,8 @@ void cutting4(int n){
                status2[1]=0;
                cntt2[1]=0;
                cnt2[1]=0;
+               currentPos2x[1]=0;
+               currentPos2y[1]=0;
                setfillstyle(SOLID_FILL,YELLOW);
                circle(377,83,6); ///p2 stop point
                floodfill(377,83,15);
