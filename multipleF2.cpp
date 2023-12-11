@@ -32,7 +32,7 @@ void cutting4(int n);
 int rn,cnt1[2]={0},cnt2[2]={0},cntt1[2]={0},status1[2]={0},cntt2[2]={0},cntg1[2] ={0},cntg2[2]={0},status2[2]={0}, status3[2]={0};
 int cnt3[2]={0},cntt3[2]={0},cntg3[2]={0},cnt4[2]={0},cntt4[2]={0},cntg4[2]={0},status4[2]={0},n, win =0;
 int f1=0,f2=0,f3=0,f4=0,fg1[2]={0},fg2[2]={0},fg3[2]={0},fg4[2]={0},endl1[2],endl2[2],endl3[2],endl4[2];
-char pp,choice, winnerp[4]={0};
+char pp,choice, winnerp[4]={0}, found = 0;
 int player1x[2][58]={0}, player1y[2][58]={0}, player2x[2][58]={0}, player2y[2][58]={0}, player3x[2][58]={0}, player3y[2][58]={0};
 int player4x[2][58]={0}, player4y[2][58]={0};
 
@@ -1457,6 +1457,23 @@ void game(){
     outtextxy(60,130,arr);
     sprintf(arr,"PLAYER%d => SECOND RUNNER UP",winnerp[2]);
     outtextxy(60,150,arr);
+    for(i=1; i<=4; i++){
+        found = 0;
+        for(j=0; j<3; j++){
+            if(i == winnerp[j]){
+                found = 1;
+                break;
+            }
+
+        }
+        if(!found){
+             winnerp[3] = i;
+             break;
+        }
+
+        printf("This is and this is last one %d\n",winnerp[i]);
+
+    }
     sprintf(arr,"PLAYER%d => NEXT TIME TRY YOUR BEST",winnerp[3]);
     outtextxy(60,170,arr);
     delay(500);
@@ -2194,10 +2211,6 @@ void winner(int  num){
        delay(500);
        //exit(0);
   }
-  else{
-       winnerp[win] = num;
-  }
-
 
 
 }
