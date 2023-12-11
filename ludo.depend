@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1702130438 source:e:\ludo\untitled3.c
+
+1702192219 source:e:\ludo\main.cpp
+	<stdio.h>
+	<graphics.h>
+	"header.h"
+
+1702192553 e:\ludo\header.h
+	<bits/stdc++.h>
+	<iostream>
+	<graphics.h>
+	<time.h>
+
+1702187695 source:e:\ludo\ludoboard.cpp
+	"header.h"
+
+1702192219 source:e:\ludo\game.cpp
+	"header.h"
+
