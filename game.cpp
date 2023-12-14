@@ -517,8 +517,6 @@ void game(){
 
                     }
                     if(fg2[0]==1 && fg2[1] == 1){
-                        //outtextxy(60,15,"PLAYER 2 IS THE WINNER");
-                        //return;
                         winner(2);
                     }
 
