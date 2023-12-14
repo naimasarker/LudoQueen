@@ -215,6 +215,16 @@ void game(){
                     outtextxy(player1x[n][cnt1[n]-1]-6,player1y[n][cnt1[n]-1]-8,"  ");
                     player1(n);
 
+                    if((player1x[n][cnt1[n]-1]>=130 && player1x[n][cnt1[n]-1]<=326) && (player1y[n][cnt1[n]-1]<=217 && player1y[n][cnt1[n]-1]>=58)){
+
+                        if((n==0 && cnt1[1]!=0) || (n==0 && fg1[1]==1)){
+                            outtextxy(95-4,217-6,"  ");
+                        }
+                        else if((n==1 && cnt1[0]!=0) || (n==1 && fg1[0]==1)){
+                            outtextxy(95-4,217-6,"  ");
+                        }
+
+                    }
                     if(fg1[0]==1 && fg1[1] == 1){
                         //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
                         //return;
@@ -300,7 +310,16 @@ void game(){
                 outtextxy(player1x[n][cnt1[n]-1]-6,player1y[n][cnt1[n]-1]-8,"  ");
 
                 player1(n);
+                if((player1x[n][cnt1[n]-1]>=130 && player1x[n][cnt1[n]-1]<=326) && (player1y[n][cnt1[n]-1]<=217 && player1y[n][cnt1[n]-1]>=58)){
 
+                        if((n==0 && cnt1[1]!=0) || (n==0 && fg1[1]==1)){
+                            outtextxy(95-4,217-6,"  ");
+                        }
+                        else if((n==1 && cnt1[0]!=0) || (n==1 && fg1[0]==1)){
+                            outtextxy(95-4,217-6,"  ");
+                        }
+
+                }
 
                 if(fg1[0] == 1 && fg1[1] == 1){
                     //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
@@ -487,7 +506,16 @@ void game(){
                     }
                     outtextxy(player2x[n][cnt2[n]-1]-6,player2y[n][cnt2[n]-1]-8,"  ");
                     player2(n);
+                    if((player2x[n][cnt2[n]-1]>=377 && player2x[n][cnt2[n]-1]<=590) && (player2y[n][cnt2[n]-1]>=109 && player2y[n][cnt2[n]-1]<=287)){
 
+                        if((n==0 && cnt2[1]!=0) || (n==0 && fg2[1]==1)){
+                            outtextxy(377-6,83-8,"  ");
+                        }
+                        else if((n==1 && cnt2[0]!=0) || (n==1 && fg2[0]==1)){
+                            outtextxy(377-6,83-8,"  ");
+                        }
+
+                    }
                     if(fg2[0]==1 && fg2[1] == 1){
                         //outtextxy(60,15,"PLAYER 2 IS THE WINNER");
                         //return;
@@ -568,7 +596,16 @@ void game(){
                 outtextxy(player2x[n][cnt2[n]-1]-6,player2y[n][cnt2[n]-1]-8,"  ");
 
                 player2(n);
+                if((player2x[n][cnt2[n]-1]>=377 && player2x[n][cnt2[n]-1]<=590) && (player2y[n][cnt2[n]-1]>=109 && player2y[n][cnt2[n]-1]<=287)){
 
+                        if((n==0 && cnt2[1]!=0) || (n==0 && fg2[1]==1)){
+                            outtextxy(377-6,83-8,"  ");
+                        }
+                        else if((n==1 && cnt2[0]!=0) || (n==1 && fg2[0]==1)){
+                            outtextxy(377-6,83-8,"  ");
+                        }
+
+                }
                 if(fg2[0] == 1 && fg2[1] == 1){
                     winner(2);
                 }
@@ -741,7 +778,16 @@ void game(){
                     }
                     outtextxy(player3x[n][cnt3[n]-1]-6,player3y[n][cnt3[n]-1]-8,"  ");
                     player3(n);
+                    if((player3x[n][cnt3[n]-1]<=522 && player3x[n][cnt3[n]-1]>=326) && (player3y[n][cnt3[n]-1]>=287 && player3y[n][cnt3[n]-1]<=447)){
 
+                        if((n==0 && cnt3[1]!=0) || (n==0 && fg3[1]==1)){
+                            outtextxy(556-6,287-8,"  ");
+                        }
+                        else if((n==1 && cnt3[0]!=0) ||(n==1 && fg3[0]==1)){
+                            outtextxy(556-6,287-8,"  ");
+                        }
+
+                    }
                     if(fg3[0]==1 && fg3[1] == 1){
 
                         winner(3);
@@ -815,6 +861,16 @@ void game(){
                 outtextxy(player3x[n][cnt3[n]-1]-6,player3y[n][cnt3[n]-1]-8,"  ");
 
                 player3(n);
+                if((player3x[n][cnt3[n]-1]<=522 && player3x[n][cnt3[n]-1]>=326) && (player3y[n][cnt3[n]-1]>=287 && player3y[n][cnt3[n]-1]<=447)){
+
+                        if((n==0 && cnt3[1]!=0) || (n==0 && fg3[1]==1)){
+                            outtextxy(556-6,287-8,"  ");
+                        }
+                        else if((n==1 && cnt3[0]!=0) ||(n==1 && fg3[0]==1)){
+                            outtextxy(556-6,287-8,"  ");
+                        }
+
+                }
 
                 if(fg3[0] == 1 && fg3[1] == 1){
 
@@ -989,7 +1045,16 @@ void game(){
                     }
                     outtextxy(player4x[n][cnt4[n]-1]-6,player4y[n][cnt4[n]-1]-8,"  ");
                     player4(n);
+                    if((player4x[n][cnt4[n]-1]<=275 && player4x[n][cnt4[n]-1]>=62) && (player4y[n][cnt4[n]-1]<=395 && player4y[n][cnt4[n]-1]>=217)){
 
+                        if((n==0 && cnt4[1]!=0) || (n==0 && fg4[1]==1)){
+                            outtextxy(275-6,421-8,"  ");
+                        }
+                        else if((n==1 && cnt4[0]!=0)|| (n==1 && fg4[0]==1)){
+                            outtextxy(275-6,421-8,"  ");
+                        }
+
+                    }
                     if(fg4[0]==1 && fg4[1] == 1){
                         //outtextxy(60,15,"PLAYER 4 IS THE WINNER");
                         //return;
@@ -1071,12 +1136,19 @@ void game(){
                 outtextxy(player4x[n][cnt4[n]-1]-6,player4y[n][cnt4[n]-1]-8,"  ");
 
                 player4(n);
+                if((player4x[n][cnt4[n]-1]<=275 && player4x[n][cnt4[n]-1]>=62) && (player4y[n][cnt4[n]-1]<=395 && player4y[n][cnt4[n]-1]>=217)){
+
+                        if((n==0 && cnt4[1]!=0) || (n==0 && fg4[1]==1)){
+                            outtextxy(275-6,421-8,"  ");
+                        }
+                        else if((n==1 && cnt4[0]!=0)|| (n==1 && fg4[0]==1)){
+                            outtextxy(275-6,421-8,"  ");
+                        }
+
+                }
 
                 if(fg4[0] == 1 && fg4[1] == 1){
-                    //outtextxy(60,15,"PLAYER 2 IS THE WINNER");
-                    //getch();
-                    //break;
-                    //return;
+                    
                     winner(4);
                 }
 
@@ -1465,8 +1537,9 @@ void player4(int n){
 void cutting1(int n){
 
         if((currentPos1x[n] == currentPos2x[0])  && (currentPos1y[n] == currentPos2y[0])&& endl2[0]!=1 && endl1[n]!=1){
-            printf("%d\n",currentPos2y[0]);
-            printf("%d\n", endl2[0]);
+            //printf("%d\n",currentPos2y[0]);
+            //printf("%d\n", endl2[0]);
+            printf("Player1 captured the pawn of player2.\n");
             status2[0]=0;
             cntt2[0]=0;
             cnt2[0]=0;
@@ -1481,8 +1554,9 @@ void cutting1(int n){
 
         }
         if((currentPos1x[n] == currentPos2x[1])  && (currentPos1y[n] == currentPos2y[1])&& endl2[1]!=1 && endl1[n]!=1){
-                printf("%d\n",currentPos2y[1]);
-            printf("%d\n", endl2[1]);
+               // printf("%d\n",currentPos2y[1]);
+               // printf("%d\n", endl2[1]);
+               printf("Player1 captured the pawn of player2.\n");
                status2[1]=0;
                cntt2[1]=0;
                cnt2[1]=0;
@@ -1497,8 +1571,9 @@ void cutting1(int n){
 
         }
         if((currentPos1x[n] == currentPos3x[0])  && (currentPos1y[n] == currentPos3y[0])&& endl3[0]!=1 && endl1[n]!=1){
-            printf("%d\n",currentPos3x[0]);
-            printf("%d\n", endl3[0]);
+            //printf("%d\n",currentPos3x[0]);
+            //printf("%d\n", endl3[0]);
+            printf("Player1 captured the pawn of player3.\n");
             status3[0]=0;
             cntt3[0]=0;
             cnt3[0]=0;
@@ -1513,8 +1588,9 @@ void cutting1(int n){
 
         }
         if((currentPos1x[n] == currentPos3x[1])  && (currentPos1y[n] == currentPos3y[1])&& endl3[1]!=1 && endl1[n]!=1){
-            printf("%d\n",currentPos3x[1]);
-            printf("%d\n", endl3[1]);
+            //printf("%d\n",currentPos3x[1]);
+            //printf("%d\n", endl3[1]);
+            printf("Player1 captured the pawn of player3.\n");
             status3[1]=0;
             cntt3[1]=0;
             cnt3[1]=0;
@@ -1529,8 +1605,9 @@ void cutting1(int n){
 
         }
         if((currentPos1x[n] == currentPos4x[0])  && (currentPos1y[n] == currentPos4y[0])&& endl4[0]!=1 && endl1[n]!=1){
-                printf("%d\n",currentPos4y[0]);
-            printf("%d\n", endl4[0]);
+               //printf("%d\n",currentPos4y[0]);
+               //printf("%d\n", endl4[0]);
+               printf("Player1 captured the pawn of player 4.\n");
                status4[0]=0;
                cntt4[0]=0;
                cnt4[0]=0;
@@ -1545,8 +1622,9 @@ void cutting1(int n){
 
         }
         if((currentPos1x[n] == currentPos4x[1])  && (currentPos1y[n] == currentPos4y[1])&& endl4[1]!=1 && endl1[n]!=1){
-                printf("%d\n",currentPos4y[1]);
-                printf("%d\n", endl4[1]);
+               // printf("%d\n",currentPos4y[1]);
+               // printf("%d\n", endl4[1]);
+               printf("Player1 captured the pawn of player 4.\n");
                status4[1]=0;
                cntt4[1]=0;
                cnt4[1]=0;
@@ -1566,8 +1644,9 @@ void cutting1(int n){
 void cutting2(int n){
 
         if((currentPos2x[n] == currentPos1x[0]) && (currentPos2y[n] == currentPos1y[0])&& endl1[0]!=1 && endl2[n]!=1){
-            printf("%d\n",currentPos1x[0]);
-                printf("%d\n", endl1[0]);
+            //printf("%d\n",currentPos1x[0]);
+            //  printf("%d\n", endl1[0]);
+            printf("Player2 captured the pawn of player1.\n");
             status1[0] = 0;
             cntt1[0]=0;
             cnt1[0]=0;
@@ -1582,8 +1661,9 @@ void cutting2(int n){
 
         }
         if((currentPos2x[n] == currentPos1x[1]) && (currentPos2y[n] == currentPos1y[1])&& endl1[1]!=1 && endl2[n]!=1){
-            printf("%d\n",currentPos1x[1]);
-                printf("%d\n", endl1[1]);
+            //printf("%d\n",currentPos1x[1]);
+            //printf("%d\n", endl1[1]);
+            printf("Player2 captured the pawn of player1.\n");
             status1[1] = 0;
             cntt1[1]=0;
             cnt1[1]=0;
@@ -1598,8 +1678,9 @@ void cutting2(int n){
 
         }
         if((currentPos2x[n] == currentPos3x[0])  && (currentPos2y[n] == currentPos3y[0])&& endl3[0]!=1 && endl2[n]!=1){
-            printf("%d\n",currentPos3x[0]);
-            printf("%d\n", endl3[0]);
+            //printf("%d\n",currentPos3x[0]);
+            //printf("%d\n", endl3[0]);
+            printf("Player2 captured the pawn of player3.\n");
             status3[0]=0;
             cntt3[0]=0;
             cnt3[0]=0;
@@ -1614,8 +1695,9 @@ void cutting2(int n){
 
         }
         if((currentPos2x[n] == currentPos3x[1])  && (currentPos2y[n] == currentPos3y[1])&& endl3[1]!=1 && endl2[n]!=1){
-            printf("%d\n",currentPos3x[1]);
-            printf("%d\n", endl3[1]);
+            //printf("%d\n",currentPos3x[1]);
+            //printf("%d\n", endl3[1]);
+            printf("Player2 captured the pawn of player3.\n");
             status3[1]=0;
             cntt3[1]=0;
             cnt3[1]=0;
@@ -1631,8 +1713,9 @@ void cutting2(int n){
         }
 
         if((currentPos2x[n] == currentPos4x[0]) && (currentPos2y[n] == currentPos4y[0])&& endl4[0]!=1 && endl2[n]!=1){
-                printf("%d\n",currentPos4y[0]);
-            printf("%d\n", endl4[0]);
+                //printf("%d\n",currentPos4y[0]);
+               //printf("%d\n", endl4[0]);
+               printf("Player2 captured the pawn of player4.\n");
                 status4[0]=0;
                cntt4[0]=0;
                cnt4[0]=0;
@@ -1647,8 +1730,9 @@ void cutting2(int n){
 
         }
         if((currentPos2x[n] == currentPos4x[1])  && (currentPos2y[n] == currentPos4y[1])&& endl4[1]!=1 && endl2[n]!=1){
-                printf("%d\n",currentPos4y[1]);
-            printf("%d\n", endl4[1]);
+                //printf("%d\n",currentPos4y[1]);
+               //printf("%d\n", endl4[1]);
+               printf("Player2 captured the pawn of player4.\n");
                status4[1]=0;
                cntt4[1]=0;
                cnt4[1]=0;
@@ -1667,8 +1751,9 @@ void cutting2(int n){
 
 void cutting3(int n){
         if((currentPos3x[n] == currentPos1x[0]) && (currentPos3y[n] == currentPos1y[0])&& endl1[0]!=1 && endl3[n]!=1){
-            printf("%d\n",currentPos1x[0]);
-                printf("%d\n", endl1[0]);
+            //printf("%d\n",currentPos1x[0]);
+            //printf("%d\n", endl1[0]);
+            printf("Player3 captured the pawn of player1.\n");
             status1[0] = 0;
             cntt1[0]=0;
             cnt1[0]=0;
@@ -1683,8 +1768,9 @@ void cutting3(int n){
 
         }
         if((currentPos3x[n] == currentPos1x[1]) && (currentPos3y[n] == currentPos1y[1])&& endl1[1]!=1 && endl3[n]!=1){
-            printf("%d\n",currentPos1x[1]);
-                printf("%d\n", endl1[1]);
+            //printf("%d\n",currentPos1x[1]);
+            //printf("%d\n", endl1[1]);
+            printf("Player3 captured the pawn of player1.\n");
             status1[1] = 0;
             cntt1[1]=0;
             cnt1[1]=0;
@@ -1699,8 +1785,9 @@ void cutting3(int n){
 
         }
         if((currentPos3x[n] == currentPos2x[0])  && (currentPos3y[n] == currentPos2y[0])&& endl2[0]!=1 && endl3[n]!=1){
-                printf("%d\n",currentPos2y[0]);
-            printf("%d\n", endl2[0]);
+                //printf("%d\n",currentPos2y[0]);
+                //printf("%d\n", endl2[0]);
+                printf("Player3 captured the pawn of player2.\n");
                 status2[0]=0;
                 cntt2[0]=0;
                 cnt2[0]=0;
@@ -1715,8 +1802,9 @@ void cutting3(int n){
 
         }
         if((currentPos3x[n] == currentPos2x[1])  && (currentPos3y[n] == currentPos2y[1])&& endl2[1]!=1 && endl3[n]!=1){
-            printf("%d\n",currentPos2y[1]);
-            printf("%d\n", endl2[1]);
+            //printf("%d\n",currentPos2y[1]);
+            //printf("%d\n", endl2[1]);
+               printf("Player3 captured the pawn of player2.\n");
                status2[1]=0;
                cntt2[1]=0;
                cnt2[1]=0;
@@ -1732,8 +1820,9 @@ void cutting3(int n){
         }
 
         if((currentPos3x[n] == currentPos4x[0])  && (currentPos3y[n] == currentPos4y[0])&& endl4[0]!=1 && endl3[n]!=1){
-                printf("%d\n",currentPos4y[0]);
-            printf("%d\n", endl4[0]);
+                //printf("%d\n",currentPos4y[0]);
+               //printf("%d\n", endl4[0]);
+               printf("Player3 captured the pawn of player4.\n");
                status4[0]=0;
                cntt4[0]=0;
                cnt4[0]=0;
@@ -1748,8 +1837,9 @@ void cutting3(int n){
 
         }
         if((currentPos3x[n] == currentPos4x[1])  && (currentPos3y[n] == currentPos4y[1])&& endl4[1]!=1 && endl3[n]!=1){
-                printf("%d\n",currentPos4y[1]);
-                printf("%d\n", endl4[1]);
+               // printf("%d\n",currentPos4y[1]);
+               // printf("%d\n", endl4[1]);
+               printf("Player3 captured the pawn of player4.\n");
                status4[1]=0;
                cntt4[1]=0;
                cnt4[1]=0;
@@ -1770,8 +1860,9 @@ void cutting3(int n){
 void cutting4(int n){
 
      if((currentPos4x[n] == currentPos1x[0]) && (currentPos4y[n] == currentPos1y[0])&& endl1[0]!=1 && endl4[n]!=1){
-                printf("%d\n",currentPos1x[0]);
-                printf("%d\n", endl1[0]);
+                //printf("%d\n",currentPos1x[0]);
+                //printf("%d\n", endl1[0]);
+                printf("Player4 captured the pawn of player1.\n");
                 status1[0] = 0;
                 cntt1[0]=0;
                 cnt1[0]=0;
@@ -1786,8 +1877,9 @@ void cutting4(int n){
 
         }
         if((currentPos4x[n] == currentPos1x[1]) && (currentPos4y[n] == currentPos1y[1])&& endl1[1]==0 && endl4[n]==0){
-            printf("%d\n",currentPos1x[1]);
-                printf("%d\n", endl1[1]);
+           //printf("%d\n",currentPos1x[1]);
+            //printf("%d\n", endl1[1]);
+            printf("Player4 captured the pawn of player1.\n");
             status1[1] = 0;
             cntt1[1]=0;
             cnt1[1]=0;
@@ -1802,8 +1894,9 @@ void cutting4(int n){
 
         }
         if((currentPos4x[n] == currentPos3x[0])  && (currentPos4y[n] == currentPos3y[0])&& endl3[0]!=1 && endl4[n]!=1){
-            printf("%d\n",currentPos3x[0]);
-            printf("%d\n", endl3[0]);
+            //printf("%d\n",currentPos3x[0]);
+            //printf("%d\n", endl3[0]);
+            printf("Player4 captured the pawn of player3.\n");
             status3[0]=0;
             cntt3[0]=0;
             cnt3[0]=0;
@@ -1818,8 +1911,9 @@ void cutting4(int n){
 
         }
         if((currentPos4x[n] == currentPos3x[1])  && (currentPos4y[n] == currentPos3y[1])&& endl3[1]!=1 && endl4[n]!=1){
-            printf("%d\n",currentPos3x[1]);
-            printf("%d\n", endl3[1]);
+            //printf("%d\n",currentPos3x[1]);
+            //printf("%d\n", endl3[1]);
+            printf("Player4 captured the pawn of player3.\n");
             status3[1]=0;
             cntt3[1]=0;
             cnt3[1]=0;
@@ -1834,8 +1928,9 @@ void cutting4(int n){
 
         }
         if((currentPos4x[n] == currentPos2x[0])  && (currentPos4y[n] == currentPos2y[0])&& endl2[0]!=1 && endl4[n]!=1){
-                printf("%d\n",currentPos2y[0]);
-            printf("%d\n", endl2[0]);
+                //printf("%d\n",currentPos2y[0]);
+                //printf("%d\n", endl2[0]);
+                printf("Player4 captured the pawn of player2.\n");
                 status2[0]=0;
                 cntt2[0]=0;
                 cnt2[0]=0;
@@ -1850,8 +1945,9 @@ void cutting4(int n){
 
         }
         if((currentPos4x[n] == currentPos2x[1])  && (currentPos4y[n] == currentPos2y[1])&& endl2[1]!=1 && endl4[n]!=1){
-                printf("%d\n",currentPos2y[1]);
-                printf("%d\n", endl2[1]);
+               // printf("%d\n",currentPos2y[1]);
+               // printf("%d\n", endl2[1]);
+               printf("Player4 captured the pawn of player2.\n");
                status2[1]=0;
                cntt2[1]=0;
                cnt2[1]=0;
