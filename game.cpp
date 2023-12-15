@@ -1193,11 +1193,6 @@ void game(){
      }
 
 
-     /*if(fg1[0]==1 && fg2[0]==1 && fg1[1]==1 && fg2[1] == 1 && fg3[0]==1 && fg3[1]==1 && fg4[0]==1 && fg4[1]==1){
-        cleardevice();
-        break;
-     }*/
-
      if(winnerp[2]!= 0){
         cleardevice();
         break;
@@ -1206,9 +1201,9 @@ void game(){
 
     }
 
-    for(i=0; i<4; i++){
+    /*for(i=0; i<4; i++){
         printf("%d\n",winnerp[i]);
-    }
+    }*/
     sprintf(arr,"PLAYER%d => WINNER",winnerp[0]);
     outtextxy(50,110,arr);
     sprintf(arr,"PLAYER%d => FIRST RUNNER UP",winnerp[1]);
@@ -1229,7 +1224,7 @@ void game(){
              break;
         }
 
-        printf("This is and this is last one %d\n",winnerp[i]);
+        //printf("This is and this is last one %d\n",winnerp[i]);
 
     }
     sprintf(arr,"PLAYER%d => NEXT TIME TRY YOUR BEST",winnerp[3]);
@@ -1245,7 +1240,7 @@ void player1(int n){
 
     if((currentPos1x[n]>=62) && (currentPos1y[n] == 252) && (currentPos1x[n]<281)){
 
-        printf("%d\n",endl1[n]);
+        //printf("%d\n",endl1[n]);
         //printf("the posion in final path: %d\n", currentPos1x[n]);
         cntg1[n]=cnt1[n];
         for(i=0; i<rn; i++){
@@ -1260,10 +1255,6 @@ void player1(int n){
             circle(player1x[n][cntg1[n]-1],player1y[n][cntg1[n]-1],6);
             floodfill(player1x[n][cntg1[n]-1],player1y[n][cntg1[n]-1],15);
             //outtextxy(60,15,"PLAYER 1 IS THE WINNER");
-
-
-
-
             //getch();
 
             fg1[n] = 1;
@@ -1273,7 +1264,6 @@ void player1(int n){
         else if((player1x[n][cntg1[n]-1]<266) && (player1y[n][cntg1[n]-1]==252)){
             //endl1[n]=1;
             if(rn == 6 && n == 1){
-                //dicerolling();
                 outtextxy(player1x[n][cnt1[n]-1]-6,player1y[n][cnt1[n]-1]-8,"  ");
 
             }
